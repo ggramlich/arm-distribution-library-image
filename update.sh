@@ -17,7 +17,7 @@ echo "Fetching and building distribution $VERSION..."
 # Create a temporary directory.
 TEMP=`mktemp -d /$TMPDIR/distribution.XXXXXX`
 
-git clone -b $VERSION https://github.com/docker/distribution.git $TEMP
+git clone -b $VERSION https://github.com/ggramlich/arm-distribution.git $TEMP
 docker build -t distribution-builder $TEMP
 
 # Create a dummy distribution-build container so we can run a cp against it.
